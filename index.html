@@ -13,12 +13,14 @@
     <div class="container1">
         <nav>
         <a href="#"><img src="images/headlogo.png" alt="logo" class="logo"></a>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Hobbies</a></li>
-            <li><a href="#">Contacts</a></li>
+        <ul id="sidemenu">
+            <li><a href="#navbar">Home</a></li>
+            <li><a href="#aboutme">About</a></li>
+            <li><a href="#skills">My Skills</a></li>
+            <li><a href="#contact">Contacts</a></li>
+            <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
         </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
             <p>Aspiring Programmer</p>
@@ -74,18 +76,12 @@
         </div>
     </div>
     <br>
-    <div class="educ-title2">
+
+    <div id="skills">
+      <div class="educ-title2">
         <h1 class="sub-title2">My Skills</h1>
         <img src="images/skill.jpg">
     </div>
-
-    <div id="myhobbies">
-    <div class="container3">
-        <p>hi</p>
-    </div>
-    </div>
-
-    <div id="hobby">
       <div class="flex-container">
         <div class="images-skill">
         <div>
@@ -113,5 +109,44 @@
 
     </div>
     </div>
+    <div id="contact">
+      <div class="container2">
+          <div class="row">
+              <div class="contact-left">
+                  <h1 class="sub-title">Contact me</h1>
+                  <p><i class="fa-solid fa-paper-plane"></i>dion.areglo1234@gmail.com</p>
+                  <p><i class="fa-solid fa-phone"></i>09621107472</p>
+                  <div class="social-icons">
+                      <a href="https://web.facebook.com/dion.areglo.1"><i class="fa-brands fa-facebook"></i></a>
+                      <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                      <a href="https://github.com/thehonored1ne"><i class="fa-brands fa-github"></i></a>
+                  </div>
+              </div>
+              <div class="contact-right">
+                  <form name="submit-to-google-sheet">
+                      <input type="text" name="Name" placeholder="Your Name" required>
+                      <input type="email" name="email" placeholder="Your Email" required>
+                      <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                      <button type="submit" class="btn btn2">Submit</button>
+                  </form>
+                  <span id="msg"></span>
+              </div>
+              
+          </div>
+      </div>
+      <div class="copyright">
+          <p>Submitted by: Dion L. Areglo</p>
+      </div>
+  </div>
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+    function closemenu(){
+      sidemenu.style.right = "-200px";
+    }
+  </script>
 </body>
 </html>
